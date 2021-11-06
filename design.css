@@ -1,7 +1,11 @@
 body {
-    background-color: lavenderblush;
+    background-color:aliceblue;
 }
 
 #title {
     text-align: center;
+}
+
+#totalMonthlyValue {
+    text-align: right;
 }
