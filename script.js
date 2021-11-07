@@ -7,7 +7,6 @@ let globalIndex = 0;
 function readyNow(){
     showMonthlyTotal(employeeInfo);
     $('#submitButton').on('click', handleSubmitButton)
-    // $('.deleteMe').on('click', handleDeleteButton)
 }
 
 function handleSubmitButton(){
@@ -63,9 +62,6 @@ function addEmployee(employeeList){
 }
 
 function handleDeleteButton(event){
-    // let byebye = $(`#button${person.ID}`)
-    // byebye.siblings("td").remove();
-    console.log(event.target.id.substring(6));
     let byebyeID = event.target.id.substring(6);
     for(let employee of employeeInfo){
         if(employee.employeeIndex == byebyeID){
