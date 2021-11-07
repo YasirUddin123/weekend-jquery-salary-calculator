@@ -9,3 +9,9 @@ body {
 #totalMonthlyValue {
     text-align: right;
 }
+
+.redColor {
+    background-color: red;
+    display: inline-block;
+    float: right;
+}

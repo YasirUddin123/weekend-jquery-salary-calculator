@@ -57,6 +57,9 @@ function addEmployee(employeeList){
 function showMonthlyTotal(salaryList){
     let totalPrice = calculateMonthlyTotal(salaryList);
     $('#totalMonthlyValue').text(`Monthly Total: $${totalPrice}`);
+    if(totalPrice > 20000) {
+        $('#totalMonthlyValue').addClass("redColor");
+    }
 }
 
 function calculateMonthlyTotal(salaryList){
