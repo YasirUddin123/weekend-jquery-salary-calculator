@@ -3,6 +3,7 @@ $(document).ready(readyNow);
 let employeeInfo = [];
 
 function readyNow(){
+    showMonthlyTotal(employeeInfo);
     $('#submitButton').on('click', handleSubmitButton)
 }
 
@@ -18,7 +19,7 @@ function handleSubmitButton(){
         lastName: lastNameValue,
         ID: idValue,
         Title: jobTitleValue,
-        Salary: annualSalaryValue
+        Salary: Number(annualSalaryValue)
     }
 
     employeeInfo.push(newEmployee);
@@ -30,6 +31,7 @@ function handleSubmitButton(){
     $("#annualSalaryValue").val('');
 
     addEmployee(employeeInfo);
+    showMonthlyTotal(employeeInfo);
 }
 
 
@@ -44,8 +46,23 @@ function addEmployee(employeeList){
                 <td>${person.lastName}</td>
                 <td>${person.ID}</td>
                 <td>${person.Title}</td>
-                <td>${person.Salary}</td>
+                <td>$${person.Salary}</td>
+                <td><button type="button">Delete</button><td>
             </tr>`;
             newRow.append(newCompletedRow);
     }
 }
+
+
+function showMonthlyTotal(salaryList){
+    let totalPrice = calculateMonthlyTotal(salaryList);
+    $('#totalMonthlyValue').text(`Monthly Total: $${totalPrice}`);
+}
+
+function calculateMonthlyTotal(salaryList){
+    let sum = 0;
+        for(let employee of salaryList){
+            sum += employee.Salary;
+        }
+    return sum;
+    }
