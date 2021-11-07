@@ -2,12 +2,65 @@ body {
     background-color:aliceblue;
 }
 
+h1 {
+    background-color:rgb(15, 15, 51);
+    color:rgb(240, 240, 240)
+}
+
 #title {
     text-align: center;
 }
 
+#firstNameValue {
+    border: 1.5px black;
+    border-style: solid;
+}
+
+#lastNameValue {
+    border: 1.5px black;
+    border-style: solid;
+}
+
+#idValue {
+    border: 1.5px black;
+    border-style: solid;
+}
+
+#jobTitleValue {
+    border: 1.5px black;
+    border-style: solid;
+}
+
+#annualSalaryValue {
+    border: 1.5px black;
+    border-style: solid;
+}
+
+#table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+#th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(15, 15, 51);
+    color: rgb(240, 240, 240)
+}
+
+
 #totalMonthlyValue {
     text-align: right;
+}
+
+#addNewEmployeeRow tr:nth-child(even) {
+    background-color: #f2f2f2;
+    border-color: 1.5px black;
+}
+
+#addNewEmployeeRow tr:nth-child(odd) {
+    background-color: #ddd;
 }
 
 .redColor {
