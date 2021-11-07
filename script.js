@@ -64,5 +64,5 @@ function calculateMonthlyTotal(salaryList){
         for(let employee of salaryList){
             sum += employee.Salary;
         }
-    return sum;
+    return (sum/12).toFixed(2);
     }
